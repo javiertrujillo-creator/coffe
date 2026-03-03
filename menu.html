@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Miniver&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/menu.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="container">
+
+            <div class="logo">
+                <a href="./index.html">☕Coffe</a>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="./index.html">home</a></li>
+                <li><a href="./menu.html">menu</a></li>
+                <li><a href="./galeria.html">galeria</a></li>
+                <li><a href="./contacto.html"><strong>contactos</strong></a></li>
+            </ul>
+
+
+            <div class="nav-icons">
+                <a href="./carrito.html" class="icon-circle carrito-icono">
+                    🛒 <span id="contador-carrito">0</span>
+                </a>
+
+                <a href="./login.html" class="icon-circle">👤</a>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<section>
+    <h2 class="title">MENU</h2>
+
+    <div class="menu-cuadro">
+
+
+        <div class="menu-card">
+            <img src="./img/hot-beverages.png" alt="bebidas calientes">
+
+            <div class="card-overlay" id="detalle1">
+                <h3>Bebidas calientes</h3>
+                <p>Amplia variedad de cafés calientes al vapor para sentir fresco y ligero su paladar</p>
+            </div>
+
+            <div class="card-content">
+                <h3>Bebidas calientes</h3>
+                <p>Amplia variedad de cafés calientes al vapor para sentir fresco y ligero su paladar</p>
+
+                <div class="btn-group">
+                    <button type="button" class="btn-comprar"
+                        data-nombre="Café Especial"
+                        data-precio="12000">
+                        Comprar
+                    </button>
+
+                    <button type="button" class="btn" onclick="toggleDetalles('detalle1')">
+                        Detalles
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="menu-card">
+            <img src="./img/cold-beverages.png" alt="bebidas frias">
+
+            <div class="card-overlay" id="detalle2">
+                <h3>Bebidas frías</h3>
+                <p>Cremoso y espumoso café frío para hacerte sentir fresco</p>
+            </div>
+
+            <div class="card-content">
+                <h3>Bebidas frías</h3>
+                <p>Cremoso y espumoso café frío para hacerte sentir fresco</p>
+
+                <div class="btn-group">
+                    <button type="button" class="btn-comprar"
+                        data-nombre="Café Frío"
+                        data-precio="14000">
+                        Comprar
+                    </button>
+
+                    <button type="button" class="btn" onclick="toggleDetalles('detalle2')">
+                        Detalles
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script src="./menu.js"></script>
+
+</body>
+</html>
