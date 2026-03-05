@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>inicio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Miniver&display=swap" rel="stylesheet">
+    <title>Contáctenos</title>
     <link rel="stylesheet" href="./css/contacto.css">
 </head>
 <body>
@@ -13,7 +12,7 @@
         <div class="container">
 
             <div class="logo">
-                <a href="./index.html">☕Coffe</a>
+                <a href="./index.html">☕Coffee</a>
             </div>
 
             <ul class="nav-menu">
@@ -27,16 +26,49 @@
                 <a href="./carrito.html" class="icon-circle carrito-icono">
                     🛒 <span id="contador-carrito">0</span>
                 </a>
-
                 <a href="./login.html" class="icon-circle">👤</a>
             </div>
 
         </div>
     </nav>
 </header>
+    <section class="contacto">
+        <h2 class="titulo">CONTÁCTENOS</h2>
+        <div class="linea"></div>
 
+        <div class="contenedor-contacto">
 
+            <div class="formulario">
+                <h3>Envíanos un mensaje</h3>
 
-<script src="./menu.js"></script>
+                <form id="formContacto">
+                    <input type="text" placeholder="Nombre completo" required>
+                    <input type="email" placeholder="Correo electrónico" required>
+                    <input type="text" placeholder="Asunto" required>
+                    <textarea placeholder="Escribe tu mensaje..." required></textarea>
+
+                    <button type="submit" class="btn-enviar">
+                        Enviar mensaje
+                    </button>
+                </form>
+
+                <p id="mensajeExito" class="mensaje-exito">
+                    ✅ Mensaje enviado correctamente
+                </p>
+            </div>
+
+            <div class="info">
+                <h3>Información</h3>
+
+                <p><strong>📍 Dirección:</strong> LA JAGUA</p>
+                <p><strong>📞 Teléfono:</strong> +57 322 444 14 06</p>
+                <p><strong>✉️ Email:</strong> javierorlando150@gmail.com</p>
+                <p><strong>🕒 Horario:</strong> 8:00 AM - 9:00 PM</p>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="./menu.js"></script>
 </body>
 </html>

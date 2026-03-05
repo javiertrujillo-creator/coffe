@@ -1,43 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>inicio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Miniver&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/carrito.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Carrito</title>
+
+<link rel="stylesheet" href="./css/carrito.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Miniver&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
+
 <header>
-    <nav class="navbar">
-        <div class="container">
 
-            <div class="logo">
-                <a href="./index.html">☕Coffe</a>
-            </div>
+<nav class="navbar">
 
-            <ul class="nav-menu">
-                <li><a href="./index.html">home</a></li>
-                <li><a href="./menu.html">menu</a></li>
-                <li><a href="./galeria.html">galeria</a></li>
-                <li><a href="./contacto.html"><strong>contactos</strong></a></li>
-            </ul>
+<div class="container">
 
-            <div class="nav-icons">
-                <a href="./carrito.html" class="icon-circle carrito-icono">
-                    🛒 <span id="contador-carrito">0</span>
-                </a>
+<div class="logo">
+<a href="./index.html">☕Coffee</a>
+</div>
 
-                <a href="./login.html" class="icon-circle">👤</a>
-            </div>
+<ul class="nav-menu">
+<li><a href="./index.html">home</a></li>
+<li><a href="./menu.html">menu</a></li>
+<li><a href="./galeria.html">galeria</a></li>
+<li><a href="./contacto.html">contactos</a></li>
+</ul>
 
-        </div>
-    </nav>
+<div class="nav-icons">
+
+<a href="./carrito.html" class="icon-circle carrito-icono">
+🛒 <span id="contador-carrito">0</span>
+</a>
+
+<a href="./login.html" class="icon-circle">👤</a>
+
+</div>
+
+</div>
+
+</nav>
+
 </header>
 
+<h2 class="titulo-carrito">Tu Carrito de Compra</h2>
 
+<div class="carrito-container">
 
+<div class="productos">
+
+<div id="lista-productos"></div>
+
+</div>
+
+<div class="resumen">
+
+<h3>Metodo de Pago</h3>
+
+<input type="text" placeholder="Nombre">
+
+<input type="text" placeholder="Dirección">
+
+<select>
+<option>Tarjeta crédito</option>
+<option>Tarjeta débito</option>
+<option>Nequi</option>
+<option>Daviplata</option>
+</select>
+
+<div class="total">
+Total: <span id="total">$0</span>
+</div>
+
+<button id="btn-pagar" class="btn-pagar">
+Pagar
+</button>
+
+</div>
+
+</div>
 
 <script src="./menu.js"></script>
+
 </body>
 </html>

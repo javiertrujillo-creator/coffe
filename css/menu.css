@@ -1,112 +1,109 @@
-
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 
 :root{
-    --color-primary: #f3961c;     /* naranja/dorado */
-    --color-secondary: #ffffff;   /* blanco */
-    --color-accent: #3b141c;      /* vino oscuro */
-    --color-background: #252525;  /* negro texto */
-    --color-surface: #f3f4f5;     /* gris claro */
-    --color-text: #cccccc;        /* gris medio */
+--color-primary:#f3961c;
+--color-secondary:#ffffff;
+--color-accent:#3b141c;
+--color-background:#252525;
+--color-surface:#f3f4f5;
+--color-text:#cccccc;
 }
-
 
 body{
-    line-height: 1.6;
-    color: var(--color-secondary);
-    background: var(--color-accent);
+line-height:1.6;
+color:var(--color-secondary);
+background:#f3f4f5;
 }
+
+
+/* ================= NAVBAR ================= */
+
+/* ================= NAVBAR ================= */
 
 .container{
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
+max-width:1400px;
+margin:auto;
+padding:0 20px;
 }
-
-
 .navbar{
+    background: var(--color-accent);
     padding: 18px 40px;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-
 .navbar .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+max-width:1400px;
+margin:auto;
+display:flex;
+align-items:center;
 }
 
-
+/* LOGO */
 .logo{
-    flex: 0 0 auto;
+    margin-right: 20px;
 }
 
 .logo a{
     font-size: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
     color: var(--color-secondary);
     font-family: "miniver", sans-serif;
     text-decoration: none;
-    letter-spacing: 1px;
     font-weight: 800;
 }
 
-
+/* MENU */
 .nav-menu{
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    margin-left: auto; 
+display:flex;
+list-style:none;
+gap:2rem;
+margin-left:auto;
 }
 
 .nav-menu a{
     color: var(--color-secondary);
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.05rem;
-    transition: opacity .3s ease;
+    transition: .25s;
 }
 
 .nav-menu a:hover{
     opacity: .75;
 }
 
-
+/* ICONOS DERECHA */
 .nav-icons{
-    display: flex;
-    align-items: center;
-    gap: 12px;
+display:flex;
+align-items:center;
+gap:12px;
+margin-left:20px;
 }
 
 .icon-circle{
-    width:38px;
-    height:38px;
-    border:1px solid rgba(255,255,255,0.4);
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:16px;
-    color:white;
-    text-decoration:none;
-    transition:0.3s;
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: .25s;
 }
 
 .icon-circle:hover{
-    background:#f4a622;
-    border-color:#f4a622;
+    background: var(--color-primary);
+    border-color: var(--color-primary);
 }
 
-/* carrito */
+/* CARRITO */
 .carrito-icono{
     padding: 6px 12px;
     border-radius: 20px;
@@ -116,10 +113,8 @@ body{
     display: flex;
     align-items: center;
     gap: 6px;
-    text-decoration: none;
 }
 
-/* contador */
 #contador-carrito{
     background: var(--color-primary);
     color: #000;
@@ -128,105 +123,165 @@ body{
     border-radius: 50px;
 }
 
-
+/* ================= TITULO ================= */
 
 .title{
-    text-align: center;
-    font-size: 2.5rem;
-    margin: 40px 0;
+text-align:center;
+margin:50px 0 30px;
+font-size:3rem;
+color:#5a1a23;
+position:relative;
 }
+
+.title::after{
+content:"";
+display:block;
+width:120px;
+height:6px;
+background:#f3961c;
+margin:10px auto 0;
+border-radius:10px;
+}
+
+
+/* ================= MENU ================= */
 
 .menu-cuadro{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    padding: 0 8%;
+max-width:1200px;
+margin:auto;
+padding:20px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:35px;
 }
+
+
+/* CARD */
 
 .menu-card{
-    position: relative;
-    background: #fff;
-    color: #000;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+background:#5a1a23;
+border-radius:22px;
+padding:30px 20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+transition:all .25s ease;
+color:white;
+position:relative;
+overflow:hidden;
 }
 
-.menu-card img{
-    width: 100%;
-    display: block;
+.menu-card:hover{
+transform:translateY(-8px);
 }
 
-/* overlay */
+
+/* IMAGEN */
+
+.img-box{
+position:relative;
+margin-bottom:10px;
+}
+
+.img-box img{
+width:140px;
+height:140px;
+object-fit:contain;
+margin:auto;
+display:block;
+}
+
+
+/* DETALLES */
+
 .card-overlay{
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,.85);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: .3s ease;
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.9);
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+opacity:0;
+transition:.3s;
+border-radius:22px;
+
+pointer-events:none; /* ESTA LINEA ARREGLA TODO */
 }
 
-.card-overlay.activo{
-    opacity: 1;
-    pointer-events: auto;
+.menu-card.active .card-overlay{
+opacity:1;
+pointer-events:auto;
 }
 
-/* contenido */
-.card-content{
-    padding: 20px;
-    text-align: center;
+
+/* TEXTO */
+
+.card-content h3{
+font-size:1.1rem;
+margin:10px 0 6px;
 }
 
-/* botones */
+.card-content p{
+font-size:.9rem;
+color:#e6e6e6;
+}
+
+
+/* BOTONES */
+
 .btn-group{
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 12px;
+display:flex;
+justify-content:center;
+gap:12px;
+margin-top:15px;
 }
 
 .btn,
 .btn-comprar{
-    background: var(--color-primary);
-    color: #fff;
-    border: none;
-    padding: 10px 22px;
-    border-radius: 999px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: .25s;
+background:#f3961c;
+color:#000;
+border:none;
+padding:8px 18px;
+border-radius:20px;
+font-weight:700;
+cursor:pointer;
+font-size:.85rem;
+transition:.25s;
 }
 
 .btn:hover,
 .btn-comprar:hover{
-    transform: translateY(-2px);
-    background: #ffb347;
+background:#ffb347;
+transform:scale(1.05);
 }
 
-/* =================================================
-   📱 RESPONSIVE
-================================================= */
 
-@media (max-width: 768px){
+/* ================= RESPONSIVE ================= */
 
-    .nav-menu{
-        display: none; /* luego puedes hacer menú hamburguesa */
-    }
+@media (max-width:900px){
 
-    .title{
-        font-size: 2rem;
-    }
+.menu-cuadro{
+grid-template-columns:repeat(2,1fr);
+}
 
-    .menu-cuadro{
-        padding: 0 20px;
-    }
+}
+
+
+@media (max-width:600px){
+
+.menu-cuadro{
+grid-template-columns:1fr;
+}
+
+.nav-menu{
+display:none;
+}
+
+.container{
+padding:0 15px;
+}
+
 }

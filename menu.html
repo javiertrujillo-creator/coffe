@@ -1,105 +1,259 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menú</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Miniver&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/menu.css">
+<link href="https://fonts.googleapis.com/css2?family=Miniver&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/menu.css">
 </head>
 
 <body>
 
 <header>
-    <nav class="navbar">
-        <div class="container">
+<nav class="navbar">
 
-            <div class="logo">
-                <a href="./index.html">☕Coffe</a>
-            </div>
+<div class="container">
 
-            <ul class="nav-menu">
-                <li><a href="./index.html">home</a></li>
-                <li><a href="./menu.html">menu</a></li>
-                <li><a href="./galeria.html">galeria</a></li>
-                <li><a href="./contacto.html"><strong>contactos</strong></a></li>
-            </ul>
+<div class="logo">
+<a href="./index.html">☕Coffee</a>
+</div>
 
+<ul class="nav-menu">
+<li><a href="./index.html">Home</a></li>
+<li><a href="./menu.html">Menu</a></li>
+<li><a href="./galeria.html">Galeria</a></li>
+<li><a href="./contacto.html">Contacto</a></li>
+</ul>
 
-            <div class="nav-icons">
-                <a href="./carrito.html" class="icon-circle carrito-icono">
-                    🛒 <span id="contador-carrito">0</span>
-                </a>
+<div class="nav-icons">
+<a href="./carrito.html" class="icon-circle carrito-icono">
+🛒 <span id="contador-carrito">0</span>
+</a>
+<a href="./login.html" class="icon-circle">👤</a>
+</div>
 
-                <a href="./login.html" class="icon-circle">👤</a>
-            </div>
+</div>
 
-        </div>
-    </nav>
+</nav>
 </header>
 
+
 <section>
-    <h2 class="title">MENU</h2>
 
-    <div class="menu-cuadro">
+<h2 class="title">MENU</h2>
 
-
-        <div class="menu-card">
-            <img src="./img/hot-beverages.png" alt="bebidas calientes">
-
-            <div class="card-overlay" id="detalle1">
-                <h3>Bebidas calientes</h3>
-                <p>Amplia variedad de cafés calientes al vapor para sentir fresco y ligero su paladar</p>
-            </div>
-
-            <div class="card-content">
-                <h3>Bebidas calientes</h3>
-                <p>Amplia variedad de cafés calientes al vapor para sentir fresco y ligero su paladar</p>
-
-                <div class="btn-group">
-                    <button type="button" class="btn-comprar"
-                        data-nombre="Café Especial"
-                        data-precio="12000">
-                        Comprar
-                    </button>
-
-                    <button type="button" class="btn" onclick="toggleDetalles('detalle1')">
-                        Detalles
-                    </button>
-                </div>
-            </div>
-        </div>
+<div class="menu-cuadro">
 
 
-        <div class="menu-card">
-            <img src="./img/cold-beverages.png" alt="bebidas frias">
+<!-- 1 -->
+<div class="menu-card">
 
-            <div class="card-overlay" id="detalle2">
-                <h3>Bebidas frías</h3>
-                <p>Cremoso y espumoso café frío para hacerte sentir fresco</p>
-            </div>
+<div class="img-box">
+<img src="./img/hot-beverages.png">
+</div>
 
-            <div class="card-content">
-                <h3>Bebidas frías</h3>
-                <p>Cremoso y espumoso café frío para hacerte sentir fresco</p>
+<div class="card-content">
 
-                <div class="btn-group">
-                    <button type="button" class="btn-comprar"
-                        data-nombre="Café Frío"
-                        data-precio="14000">
-                        Comprar
-                    </button>
+<h3>Bebidas calientes</h3>
+<p>Cafés calientes al vapor con el mejor aroma.</p>
 
-                    <button type="button" class="btn" onclick="toggleDetalles('detalle2')">
-                        Detalles
-                    </button>
-                </div>
-            </div>
-        </div>
+<div class="btn-group">
 
-    </div>
+<button class="btn-comprar"
+data-nombre="Cafe caliente"
+data-precio="12000">
+Comprar
+</button>
+
+<button class="btn" onclick="toggleDetalles(this)">
+Detalles
+</button>
+
+</div>
+
+<div class="card-overlay">
+<p>Café caliente recién preparado con aroma intenso.</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- 2 -->
+<div class="menu-card">
+
+<div class="img-box">
+<img src="./img/cold-beverages.png">
+</div>
+
+<div class="card-content">
+
+<h3>Bebidas frías</h3>
+<p>Café frío cremoso y refrescante.</p>
+
+<div class="btn-group">
+
+<button class="btn-comprar"
+data-nombre="Cafe frio"
+data-precio="14000">
+Comprar
+</button>
+
+<button class="btn" onclick="toggleDetalles(this)">
+Detalles
+</button>
+
+</div>
+
+<div class="card-overlay">
+<p>Café frío con espuma y hielo.</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- 3 -->
+<div class="menu-card">
+
+<div class="img-box">
+<img src="./img/refreshment.png">
+</div>
+
+<div class="card-content">
+
+<h3>Refrescos</h3>
+<p>Bebidas dulces y refrescantes.</p>
+
+<div class="btn-group">
+
+<button class="btn-comprar"
+data-nombre="Refresco"
+data-precio="9000">
+Comprar
+</button>
+
+<button class="btn" onclick="toggleDetalles(this)">
+Detalles
+</button>
+
+</div>
+
+<div class="card-overlay">
+<p>Refresco natural con frutas.</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- 4 -->
+<div class="menu-card">
+
+<div class="img-box">
+<img src="./img/special-combo.png">
+</div>
+
+<div class="card-content">
+
+<h3>Combos especiales</h3>
+<p>La mejor combinación de sabores.</p>
+
+<div class="btn-group">
+
+<button class="btn-comprar"
+data-nombre="Combo especial"
+data-precio="15000">
+Comprar
+</button>
+
+<button class="btn" onclick="toggleDetalles(this)">
+Detalles
+</button>
+
+</div>
+
+<div class="card-overlay">
+<p>Combo de café + postre especial.</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- 5 -->
+<div class="menu-card">
+
+<div class="img-box">
+<img src="./img/burger-frenchfries.png">
+</div>
+
+<div class="card-content">
+
+<h3>Comidas rápidas</h3>
+<p>Hamburguesas y papas.</p>
+
+<div class="btn-group">
+
+<button class="btn-comprar"
+data-nombre="Comida rapida"
+data-precio="11000">
+Comprar
+</button>
+
+<button class="btn" onclick="toggleDetalles(this)">
+Detalles
+</button>
+
+</div>
+
+<div class="card-overlay">
+<p>Hamburguesa con papas crujientes.</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- 6 -->
+<div class="menu-card">
+
+<div class="img-box">
+<img src="./img/desserts.png">
+</div>
+
+<div class="card-content">
+
+<h3>Postres</h3>
+<p>Deliciosos postres.</p>
+
+<div class="btn-group">
+
+<button class="btn-comprar"
+data-nombre="Postre"
+data-precio="8000">
+Comprar
+</button>
+
+<button class="btn" onclick="toggleDetalles(this)">
+Detalles
+</button>
+
+</div>
+
+<div class="card-overlay">
+<p>Postres dulces para acompañar el café.</p>
+</div>
+
+</div>
+</div>
+
+
+</div>
 </section>
+
 
 <script src="./menu.js"></script>
 
