@@ -167,3 +167,77 @@ location.reload();
 }
 
 });
+
+// =======================
+// REGISTRO
+// =======================
+
+const formRegistro = document.getElementById("formRegistro");
+
+if(formRegistro){
+
+formRegistro.addEventListener("submit",(e)=>{
+
+e.preventDefault();
+
+const usuario = document.getElementById("usuario").value;
+const correo = document.getElementById("correo").value;
+const password = document.getElementById("password").value;
+
+const usuarioData = {
+usuario,
+correo,
+password
+};
+
+localStorage.setItem("usuario",JSON.stringify(usuarioData));
+
+alert("Registro exitoso ✅");
+
+window.location.href="login.html";
+
+});
+
+}
+
+
+
+// =======================
+// LOGIN
+// =======================
+
+const formLogin = document.getElementById("formLogin");
+
+if(formLogin){
+
+formLogin.addEventListener("submit",(e)=>{
+
+e.preventDefault();
+
+const correo = document.getElementById("loginCorreo").value;
+const password = document.getElementById("loginPassword").value;
+
+const usuarioGuardado = JSON.parse(localStorage.getItem("usuario"));
+
+if(!usuarioGuardado){
+
+alert("No existe usuario ❌");
+return;
+
+}
+
+if(correo === usuarioGuardado.correo && password === usuarioGuardado.password){
+
+alert("Bienvenido "+usuarioGuardado.usuario+" ☕");
+
+window.location.href="index.html";
+
+}else{
+
+alert("Correo o contraseña incorrectos ❌");
+
+}
+
+});
+
+}
